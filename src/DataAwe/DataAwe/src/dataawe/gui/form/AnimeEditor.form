@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="dateAiredLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="ratingLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="titleLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="genreLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="dubbedCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="genreComboBox" alignment="0" pref="484" max="32767" attributes="0"/>
+                  <Component id="dateAiredField" alignment="0" max="32767" attributes="0"/>
+                  <Component id="titleField" alignment="1" max="32767" attributes="0"/>
+                  <Component id="ratingSlider" pref="484" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="titleLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="titleField" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="dateAiredLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="dateAiredField" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="genreLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="genreComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="ratingLabel" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
+                      <Component id="dubbedCheckBox" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="ratingSlider" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="50" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JLabel" name="titleLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Title"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="dateAiredLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Date aired"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="genreLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Genre"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="ratingLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Rating"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="titleField">
+    </Component>
+    <Component class="javax.swing.JFormattedTextField" name="dateAiredField">
+      <Properties>
+        <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor">
+          <Format format="yyyy-MM-dd" subtype="-1" type="1"/>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value=""/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="genreComboBox">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="0"/>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;Genre&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JSlider" name="ratingSlider">
+      <Properties>
+        <Property name="majorTickSpacing" type="int" value="10"/>
+        <Property name="minorTickSpacing" type="int" value="2"/>
+        <Property name="paintTicks" type="boolean" value="true"/>
+        <Property name="snapToTicks" type="boolean" value="true"/>
+        <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="value" type="int" value="0"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JCheckBox" name="dubbedCheckBox">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Dubbed"/>
+      </Properties>
+    </Component>
+  </SubComponents>
+</Form>

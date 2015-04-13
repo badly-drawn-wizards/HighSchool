@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>FancyShader Help</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="main.css"/>
+    </head>
+    <body>
+    <center><img alt="FancyShader" src="FancyShaderLogo.png"/></center>
+    <h1>Designing a shader</h1>
+    <p>
+        FancyShader uses GLSL. The GLSL in FancyShader describes a program 
+        that runs for each pixel on the preview canvas with the pixel coordinate
+        as the input and the pixel color as the output. For example the GLSL program:
+    </p>
+    <code>
+        uniform vec2 resolution; <br/>
+        void main() { <br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;// normalize the coordinates from pixel dimensions to unit dimensions <br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;vec2 position = gl_FragCoord.xy/resolution; <br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;// GLSL colors are represented as 4-dimensional vectors containing red, blue, green and opacity values ranging from 0.0 to 1.0 <br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;gl_FragColor = vec4(position.x); <br/>
+        }
+    </code>
+    <p>
+        is a grayscale gradient that goes from black to white as one goes from left to right. This is a public demo <b>Example 1 (Greyscale Gradient)</b>.
+        One can see that <b>gl_FragCoord</b> was not the only input. The uniform <b>resolution</b> was also inputted, which is a vector 
+        containing the preview canvas pixel dimensions. Another such uniform provided by FancyShader is <b>time</b> which is a <b>float</b> 
+        rather than a <b>vec2</b>. This allows for animation to be introduced.
+    </p>
+    
+    <p>
+        If the code entered is invalid and does not compile, the error shader will be shown. This can be seen in the public demo <b>Example 2 (Error Shader)</b>
+    </p>
+    <h2>Edit shader details</h2>
+    <ol>
+        <li>Open <b>File &#8594 Edit details</b></li>
+        <li>Change the details and press <b>Done</b> to save</li>
+    </ol>
+</body>
+</html>

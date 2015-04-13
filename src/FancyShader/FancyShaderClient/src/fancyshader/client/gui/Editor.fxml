@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (C) 2014 Reuben Steenekamp
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.canvas.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="300.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" fx:controller="fancyshader.client.gui.EditorController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu text="_File">
+            <items>
+                  <MenuItem onAction="#onSavePressed" text="_Save" />
+                  <MenuItem onAction="#onEditDetailsPressed" text="_Edit details" />
+                  <MenuItem onAction="#onDeletePressed" text="_Delete" />
+            </items>
+          </Menu>
+          <Menu text="_Run">
+               <items>
+                   <MenuItem fx:id="playMenuItem" onAction="#onPlayPressed"  text="_Start"/>  
+                   <MenuItem fx:id="pauseMenuItem" onAction="#onPausePressed"  text="_Pause"/>  
+                   <MenuItem fx:id="resetMenuItem" onAction="#onResetPressed"  text="_Reset"/>
+               </items>
+          </Menu>
+          <Menu text="_Help">
+            <items>
+                <MenuItem onAction="#onHelpContentPressed" text="Help _content" />
+                <MenuItem onAction="#onAboutPressed" text="_About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <SplitPane dividerPositions="0.5" prefHeight="430.0" prefWidth="439.0" BorderPane.alignment="CENTER">
+        <items>
+            <TextArea fx:id="codeArea" SplitPane.resizableWithParent="false" />
+            <BorderPane>
+               <center>
+                    <fancyshader.client.viewer.DemoViewer fx:id="viewer" />
+               </center>
+            </BorderPane>
+        </items>
+      </SplitPane>
+   </center>
+</BorderPane>

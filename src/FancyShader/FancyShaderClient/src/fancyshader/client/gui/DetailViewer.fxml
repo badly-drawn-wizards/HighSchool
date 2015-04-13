@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (C) 2014 Reuben Steenekamp
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="rootPane" prefHeight="191.0" prefWidth="281.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fancyshader.client.gui.DetailViewerController">
+   <children>
+      <Label layoutX="10.0" layoutY="14.0" text="Title" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="225.0" />
+      <TextField fx:id="titleField" disable="true" layoutX="54.0" layoutY="10.0" prefHeight="25.0" prefWidth="208.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="10.0" />
+      <Label layoutX="10.0" layoutY="43.0" prefHeight="17.0" prefWidth="34.0" text="Tags" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="225.0" />
+      <TextField fx:id="tagField" disable="true" layoutX="54.0" layoutY="39.0" prefHeight="25.0" prefWidth="208.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="10.0" />
+      <Label layoutX="10.0" layoutY="73.0" prefHeight="17.0" prefWidth="34.0" text="Creator" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="225.0" />
+      <TextField fx:id="creatorField" disable="true" layoutX="54.0" layoutY="69.0" prefHeight="25.0" prefWidth="208.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="10.0" />
+      <Label layoutX="17.0" layoutY="103.0" prefHeight="17.0" prefWidth="75.0" text="Date created" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="194.0" />
+      <TextField fx:id="dateCreatedField" disable="true" layoutX="92.0" layoutY="99.0" prefHeight="25.0" prefWidth="177.0" AnchorPane.leftAnchor="92.0" AnchorPane.rightAnchor="10.0" />
+      <Button fx:id="closeButton" cancelButton="true" defaultButton="true" layoutX="107.0" layoutY="163.0" onAction="#onClosePressed" prefHeight="25.0" prefWidth="50.0" text="Close" AnchorPane.leftAnchor="107.0" AnchorPane.rightAnchor="107.0" />
+      <Label fx:id="infoLabel" layoutX="11.0" layoutY="138.0" prefHeight="17.0" prefWidth="263.0" text="Views and delightful" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+   </children>
+</AnchorPane>

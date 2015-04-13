@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (C) 2014 Reuben Steenekamp
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="123.0" prefWidth="236.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fancyshader.client.gui.RegisterController">
+   <children>
+      <TextField fx:id="usernameField" layoutX="14.0" layoutY="28.0" onKeyReleased="#onUsernameChanged" promptText="Username" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" />
+      <PasswordField fx:id="passwordField" layoutX="14.0" layoutY="61.0" onKeyReleased="#onPasswordChanged" promptText="Password" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" />
+      <Button fx:id="registerButton" defaultButton="true" layoutX="48.0" layoutY="92.0" mnemonicParsing="true" onAction="#onRegisterPressed" prefHeight="25.0" prefWidth="62.0" text="_Register" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="126.0" />
+      <Label fx:id="topLabel" layoutX="15.0" layoutY="5.0" prefHeight="17.0" prefWidth="149.0" text="Create your account:" textAlignment="CENTER" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="16.0" />
+      <Button fx:id="cancelButton" cancelButton="true" layoutX="125.0" layoutY="92.0" mnemonicParsing="true" onAction="#onCancelPressed" prefHeight="25.0" prefWidth="62.0" text="_Cancel" AnchorPane.leftAnchor="124.0" AnchorPane.rightAnchor="50.0" />
+   </children>
+</AnchorPane>

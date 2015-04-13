@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (C) 2014 Reuben Steenekamp
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.canvas.*?>
+<?import javax.media.opengl.awt.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:id="rootPane" prefHeight="300.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" fx:controller="fancyshader.client.gui.BrowserController">
+  <center>
+    <SplitPane dividerPositions="0.3328" focusTraversable="true" prefHeight="312.0" prefWidth="422.0">
+      <items>
+        <BorderPane prefHeight="200.0" prefWidth="200.0">
+          <center>
+            <ListView fx:id="demoList" prefHeight="200.0" prefWidth="200.0" />
+          </center>
+          <top>
+            <TextField fx:id="searchField" prefWidth="200.0" promptText="Search" />
+          </top>
+        </BorderPane>
+        <BorderPane prefHeight="200.0" prefWidth="200.0">
+            <center>
+                <fancyshader.client.viewer.DemoViewer fx:id="viewer"/>
+            </center>
+        </BorderPane>
+      </items>
+    </SplitPane>
+  </center>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+            <Menu text="_Account">
+              <items>
+                <MenuItem fx:id="loginMenuItem" onAction="#onLoginPressed" text="_Sign in" />
+                <MenuItem fx:id="registerMenuItem" onAction="#onRegisterPressed" text="_Register"/> 
+                <MenuItem fx:id="logoutMenuItem" onAction="#onLogoutPressed" text="_Logout" />
+              </items>
+            </Menu>
+            <Menu text="_Demo">
+              <items>
+                <MenuItem fx:id="createMenuItem" onAction="#onCreatePressed" text="_Create" />
+                  <MenuItem fx:id="forkMenuItem" onAction="#onForkPressed" text="_Fork" />
+                  <MenuItem fx:id="editMenuItem" onAction="#onEditPressed" text="_Edit" />
+                  <MenuItem fx:id="infoMenuItem" onAction="#onInfoPressed" text="_Info" />
+                  <MenuItem fx:id="delightfulMenuItem" onAction="#onDelightfulPressed" text="_Delightful" />
+              </items>
+            </Menu>
+            
+          <Menu text="_Run">
+               <items>
+                   <MenuItem fx:id="playMenuItem" onAction="#onPlayPressed"  text="_Start"/>  
+                   <MenuItem fx:id="pauseMenuItem" onAction="#onPausePressed"  text="_Pause"/>  
+                   <MenuItem fx:id="resetMenuItem" onAction="#onResetPressed"  text="_Reset"/>
+               </items>
+          </Menu>
+          <Menu text="_Help">
+            <items>
+                <MenuItem fx:id="helpMenuItem" onAction="#onHelpContentsPressed" text="Help _Contents" />
+                <MenuItem fx:id="aboutMenuItem" text="_About" onAction="#onAboutPressed" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>

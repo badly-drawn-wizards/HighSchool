@@ -1,0 +1,18 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 30 Jul 2014, 8:09:26 AM
+    Author     : 8bitb_000
+*/
+
+body {
+    background: #e5c1e5;
+}
+h1, h2 {
+    font-family: "Brush Script MT", cursive;
+    color: blueviolet;
+    text-shadow: 0px 0px 5px rgb(140, 70, 200);
+}
