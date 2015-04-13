@@ -3,13 +3,13 @@ I decided to upload it as is. The shaders folder contains shader code that I man
 
 At the time I was aware that:
 
-    * version control and dependency management existed
-    * the distribution could be automated by a build script
-    * singletons are bad
-    * using RMI for end-user client to server interaction is bad
-    * sending plain-text passwords over unencrypted channels are bad and completely invalidate hashing and salting them on the database.
-    * fetching the implementation of SHA to use for password hashing means that passwords on the database are non-portable
-    * getting a GL context working inside JavaFX was a dirty hack
+   * version control and dependency management existed
+   * the distribution could be automated by a build script
+   * singletons are bad
+   * using RMI for end-user client to server interaction is bad
+   * sending plain-text passwords over unencrypted channels are bad and completely invalidate hashing and salting them on the database.
+   * fetching the implementation of SHA to use for password hashing means that passwords on the database are non-portable
+   * getting a GL context working inside JavaFX was a dirty hack
     
 However 
     
